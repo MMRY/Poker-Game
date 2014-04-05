@@ -53,7 +53,6 @@ def cal_win_odds_mc(hole, community):
     if len(community) == 0:
         return cal_win_odds_mc_preflop(hole,deck,N)
     elif len(community) == 3:
-        print("len = 3")
         return cal_win_odds_mc_flop(hole,community,deck,N)
     else: # len(community) == 4
         return cal_win_odds_mc_turn(hole,community,deck,N)
@@ -194,6 +193,7 @@ def no_cards_equal_3(cards):
 if __name__ == '__main__':
     import time
     """1. Only two hole cards are known."""
+    print("Only two hole cards are known.")
     print('time: ' + str(time.time()))
     print(str(cal_win_odds_mc([(0,'s'),(9,'h')],[])))
     print('time: ' + str(time.time()))
@@ -203,13 +203,13 @@ if __name__ == '__main__':
     print('time: ' + str(time.time()))
 
     """2. Flop: (2 hole cards + 3 community cards):"""
-    print(str(cal_win_odds_mc([(0,'s'),(9,'h')],
-                              [(0,'h'),(0,'d'),(12,'c')])))
+    print("flop: " + str(cal_win_odds_mc([(0,'s'),(9,'h')],
+                                         [(3,'d'),(12,'c'),(12,'d')])))
 
     print('time: ' + str(time.time()))
     """3. Turn: (2 hole cards + 4 community cards):"""
-    print(str(cal_win_odds_mc([(0,'s'),(9,'h')],
-                              [(0,'h'),(0,'d'),(12,'c'),(4,'d')])))
+    print('turn:' + str(cal_win_odds_mc([(8,'s'),(8,'h')],
+                                        [(3,'d'),(9,'c'),(10,'c'),(7,'d')])))
 
     print('time: ' + str(time.time()))
 

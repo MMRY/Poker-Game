@@ -150,14 +150,15 @@ combination3 = [(0,1,2),
 if __name__ == '__main__':
     import time
     print('time: ' + str(time.time()))
-    #print(str(cal_win_odds_bf([(0,'s'),(9,'h')],
-    #                          [(3,'d'),(12,'c'),(12,'d')])))
-    #print('time: ' + str(time.time()))
-    print(str(cal_win_odds_bf([(8,'s'),(8,'h')],
-                              [(3,'d'),(9,'c'),(10,'c'),(7,'d')])))
+    print('3 com: '+ str(cal_win_odds_bf([(0,'s'),(9,'h')],
+                                         [(3,'d'),(12,'c'),(12,'d')])))
     print('time: ' + str(time.time()))
-    print(str(cal_win_odds_bf([(12,'h'),(12,'c')],
-                              [(4,'c'),(5,'c'),(6,'c'),(7,'c'),(8,'c')])))
+    print('4 com: '+ str(cal_win_odds_bf([(8,'s'),(8,'h')],
+                                         [(3,'d'),(9,'c'),(10,'c'),(7,'d')])))
+    print('time: ' + str(time.time()))
+    print('5 com: '
+          + str(cal_win_odds_bf([(12,'h'),(12,'c')],
+                                [(4,'c'),(5,'c'),(6,'c'),(7,'c'),(8,'c')])))
     print('time: ' + str(time.time()))
 
     """Test result:
