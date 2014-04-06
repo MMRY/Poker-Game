@@ -51,8 +51,11 @@ else:
             """The largest amout you can bet < what you need to call.
                Can only fold."""
             print(0)
+        elif game["betting"]["canRaise"] == "false":
+            print(game["betting"]["call"])
         else:
-            print(bet)
+            print(int(bet/game["betting"]["raise"]) *
+                  game["betting"]["raise"])
     else:
         """complete"""
         print(0)
