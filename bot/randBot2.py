@@ -13,6 +13,7 @@ else:
 	game = json.loads(game_string)
 	# first check if we can raise
 	betting = game["betting"]
+	print str(betting)
 	if betting["canRaise"] == "true":
 		mine = game["self"]
 		min_bet = betting["raise"]
