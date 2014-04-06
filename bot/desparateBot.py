@@ -19,9 +19,9 @@ else:
 		# check if we can raise
 		if betting["canRaise"] == "true":
 			# go all in
-			return mine["chips"]
+			print mine["chips"]
 	# else call
-	return betting["call"]
+	print betting["call"]
 	
 	
 	
