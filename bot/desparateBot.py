@@ -17,7 +17,7 @@ else:
 	mine = game["self"]
 	if mine["chips"] < 333 #TODO: this is hardcoded to assume that all players start with 1000 chips. That might not be the case
 		# check if we can raise
-		if betting["canRaise"] == "true":
+		if betting["canRaise"]:
 			# go all in
 			print mine["chips"]
 	# else call

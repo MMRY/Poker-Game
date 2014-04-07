@@ -15,7 +15,9 @@ import pokerlib
                   Each card is a tuple.
    Returns: The win odds given the cards you know.
    """
+debugF = open('debugBruteForce','a')
 def cal_win_odds_bf(hole, community):
+    #debugF.write("hole: " + str(hole) + " community: " + str(community) + "\n")
     if len(hole) != 2:
         raise ValueError('There should be 2 hole cards!\n')
     if len(community) not in range(3,6):
@@ -53,11 +55,13 @@ def cal_win_odds_bf(hole, community):
         return cal_win_odds_bf_turn(hole, community, deck)
     else:
         return cal_win_odds_bf_river(hole, community, deck)
+    debugF.close()
 
 def cal_win_odds_bf_flop(hole, community, deck):
     """ The uncertainty are:
         1. Opponent's hole cards.
         2. Turn and River."""
+   # debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
     sumOfComparison = 0
     sumOfWin = 0
     sampleCards = [0,0,0,0] # 4 cards of uncertainty
@@ -88,12 +92,14 @@ def cal_win_odds_bf_flop(hole, community, deck):
                         oppoValue = pokerlib.eval_7hand(oppoHand)
                         if myValue < oppoValue:
                             sumOfWin = sumOfWin + 1
-    return sumOfWin/sumOfComparison
+    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
+    return float(sumOfWin)/float(sumOfComparison)
 
 def cal_win_odds_bf_turn(hole, community, deck):
     """ The uncertainty are:
         1. Opponent's hole cards.
         2. River."""
+   # debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
     sumOfComparison = 0
     sumOfWin = 0
     sampleCards = [0,0,0]
@@ -114,11 +120,13 @@ def cal_win_odds_bf_turn(hole, community, deck):
                     oppoValue = pokerlib.eval_7hand(oppoHand)
                     if myValue < oppoValue:
                         sumOfWin = sumOfWin + 1
-    return sumOfWin/sumOfComparison
+    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
+    return float(sumOfWin)/float(sumOfComparison)
 
 def cal_win_odds_bf_river(hole, community, deck):
     """ The uncertainty are:
         Opponent's hole cards."""
+    #debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
     sumOfComparison = 0
     sumOfWin = 0
     oppoC1 = 0
@@ -134,7 +142,8 @@ def cal_win_odds_bf_river(hole, community, deck):
             oppoValue = pokerlib.eval_7hand(oppoHand)
             if myValue < oppoValue:
                 sumOfWin = sumOfWin + 1
-    return sumOfWin/sumOfComparison
+    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
+    return float(sumOfWin)/float(sumOfComparison)
 
 combination4 = [(0,1,2,3),
                 (0,2,1,3),

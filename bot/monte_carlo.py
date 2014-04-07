@@ -86,7 +86,7 @@ def cal_win_odds_mc_preflop(hole, deck, N):
         if myValue < oppoValue:
             sumOfWin = sumOfWin + 1
 
-    return sumOfWin/N
+    return float(sumOfWin)/float(N)
 
 """Given: len(community) = 3"""
 def cal_win_odds_mc_flop(hole, community, deck, N):
@@ -109,7 +109,7 @@ def cal_win_odds_mc_flop(hole, community, deck, N):
         oppoValue = pokerlib.eval_7hand(oppoHand)
         if myValue < oppoValue:
             sumOfWin = sumOfWin + 1
-    return sumOfWin/N
+    return float(sumOfWin)/float(N)
 
 """Given: len(community) = 4"""
 def cal_win_odds_mc_turn(hole,community,deck,N):
@@ -130,7 +130,7 @@ def cal_win_odds_mc_turn(hole,community,deck,N):
         oppoValue = pokerlib.eval_7hand(oppoHand)
         if myValue < oppoValue:
             sumOfWin = sumOfWin + 1
-    return sumOfWin/N
+    return float(sumOfWin)/float(N)
         
 
 """no_cards_equal_7(cards):

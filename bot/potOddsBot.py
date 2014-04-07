@@ -8,9 +8,8 @@ import monte_carlo
 import brute_force
 import CT
 
+debugF = open('debugPotOddsBot','a')
 if (len(sys.argv) < 2):
-    # exit with an error
-    debugF = open('debugPotOddsBot.txt','a')
     debugF.write(sys.argv + '\n')
     debugF.close()
     sys.exit(1)
@@ -19,6 +18,8 @@ else:
     game_string = open(game_data_location, 'r')
     game_info = game_string.read()
     game = json.loads(game_info)
+
+    #debugF.write(str(game) + "\n")
 
     """1. Get the current amount in pot"""
     pot = 0
@@ -37,26 +38,32 @@ else:
         lenCom = len(community)
         for i in range(0,lenCom):
             community[i] = CT.translate_from_mp_to_string(community[i])
+    #debugF.write("hole " + str(hole) + " community: " + str(community) + " ")
     
     if (gameState == "pre-flop" or
         gameState == "flop" or
         gameState == "turn" or
         gameState == "river"):
         if gameState != "river":
-            winOdds = monte_carlo.cal_win_odds_mc(hole, community)
+            winOdds = float(monte_carlo.cal_win_odds_mc(hole, community))
         else:
-            winOdds = brute_force.cal_win_odds_bf(hole, community)
+            winOdds = float(brute_force.cal_win_odds_bf(hole, community))
         bet = winOdds * pot / (1-winOdds)
         if bet < game["betting"]["call"]:
             """The largest amout you can bet < what you need to call.
                Can only fold."""
+            debugF.write("WIN ODDS: " + str(winOdds) + " FOLDING\n")
             print(0)
         elif game["betting"]["canRaise"] == "false":
+            debugF.write("WIN ODDS: " + str(winOdds) +  " CALLING: " + str(game["betting"]["call"]) + "\n")
             print(game["betting"]["call"])
         else:
+            debugF.write("WIN ODDS: " + str(winOdds) +  " BET: " + str(int(bet/game["betting"]["raise"]) *
+                  game["betting"]["raise"]) + "\n")
             print(int(bet/game["betting"]["raise"]) *
                   game["betting"]["raise"])
     else:
         """complete"""
         print(0)
+    debugF.close()
     sys.exit(0)
