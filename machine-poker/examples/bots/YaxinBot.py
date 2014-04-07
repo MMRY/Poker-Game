@@ -11,5 +11,14 @@ else:
 	game_info = game_string.read()
 	game = json.loads(game_info)
 	betting = game["betting"]
-	print betting["raise"]
-	sys.exit(0)
+	can_raise = betting["canRaise"]
+	# TODO get win chance
+	win_chance = .75
+	if win_chance >= .70 and can_raise:
+		# go all in
+		mine = game["self"]
+		print mine["chips"]
+	elif win_chance >= .50:
+		print betting["call"]
+	else: # fold
+		print 0

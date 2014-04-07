@@ -15,7 +15,7 @@ else:
 	game = json.loads(game_info)
 	# first check if we can raise
 	betting = game["betting"]
-	if betting["canRaise"] == "true":
+	if betting["canRaise"]:
 		mine = game["self"]
 		min_bet = betting["raise"]
 		max_chips = mine["chips"]
@@ -24,10 +24,8 @@ else:
 			print max_chips
 		else:
 			# get a random bet which is a multiple of 5 (TODO: is 5 the correct betting increment?)
-			bet = randrange(min_bet, max_chips, 5)
+			bet = random.randrange(min_bet, max_chips, 5)
 			print bet
 	else: # if we can't raise
 		print betting["call"]
-	betting = game["betting"]
-	print betting["raise"]
 	sys.exit(0)
