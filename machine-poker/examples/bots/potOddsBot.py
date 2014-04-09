@@ -22,7 +22,7 @@ else:
     #debugF.write(str(game) + "\n")
 
     """1. Get the current amount in pot"""
-    pot = 0
+    pot = 0 #Current amount in bot
     for player in game["players"]:
         pot = pot + player["wagered"]
     
@@ -30,14 +30,9 @@ else:
     gameState = game["state"]
     winOdds = 0
     hole = [game["self"]["cards"][0],game["self"]["cards"][1]]
-    hole[0] = CT.translate_from_mp_to_string(hole[0])
-    hole[1] = CT.translate_from_mp_to_string(hole[1])
     community = []
     if len(game["community"]) > 0:
         community = game["community"]
-        lenCom = len(community)
-        for i in range(0,lenCom):
-            community[i] = CT.translate_from_mp_to_string(community[i])
     #debugF.write("hole " + str(hole) + " community: " + str(community) + " ")
     
     if (gameState == "pre-flop" or
@@ -50,16 +45,20 @@ else:
             winOdds = float(brute_force.cal_win_odds_bf(hole, community))
         bet = winOdds * pot / (1-winOdds)
         if bet < game["betting"]["call"]:
-            """The largest amout you can bet < what you need to call.
+            """The largest amount you can bet < what you need to call.
                Can only fold."""
             debugF.write("WIN ODDS: " + str(winOdds) + " FOLDING\n")
             print(0)
         elif game["betting"]["canRaise"] == "false":
-            debugF.write("WIN ODDS: " + str(winOdds) +  " CALLING: " + str(game["betting"]["call"]) + "\n")
+            debugF.write("WIN ODDS: " + str(winOdds)
+                         +  " CALLING: "
+                         + str(game["betting"]["call"]) + "\n")
             print(game["betting"]["call"])
         else:
-            debugF.write("WIN ODDS: " + str(winOdds) +  " BET: " + str(int(bet/game["betting"]["raise"]) *
-                  game["betting"]["raise"]) + "\n")
+            debugF.write("WIN ODDS: " + str(winOdds)
+                         +  " BET: "
+                         + str(int(bet/game["betting"]["raise"]) *
+                               game["betting"]["raise"]) + "\n")
             print(int(bet/game["betting"]["raise"]) *
                   game["betting"]["raise"])
     else:

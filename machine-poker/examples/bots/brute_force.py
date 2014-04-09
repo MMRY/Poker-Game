@@ -3,68 +3,57 @@
    This file provides the brute-force method to calculate the win odds."""
 import CT
 import pokerlib
+
 """cal_win_odds_bf(hole, community):
    Given:
-   (1) hole: An array storing two cards. Each card is a tuple.
-             The first element of the tuple is rank.
-             The second element of the tuple is suit.
-             eg. (0, 's') = 2s
+   (1) hole: An array storing two cards.
+             Each card is a string representing the card.
+             eg. 'Qd' where Q is the rank, d is the suit(Diamonds).
+                 'Ts' where T(10) is the rank, s is the suit(Spades).
+                 '2h' where 2 is the rank, h is the suit(Hearts).
    (2) community: An array storing the dealt community cards. The length of
                   this array is the number of dealt community cards.
                   The length must be one of 3, 4, 5.
-                  Each card is a tuple.
+                  Each card is a string. Refer to "hole".
    Returns: The win odds given the cards you know.
+            Float number.
    """
-debugF = open('debugBruteForce','a')
 def cal_win_odds_bf(hole, community):
-    #debugF.write("hole: " + str(hole) + " community: " + str(community) + "\n")
-    if len(hole) != 2:
-        raise ValueError('There should be 2 hole cards!\n')
-    if len(community) not in range(3,6):
-        raise ValueError('Incorrect number of community cards!\n')
+    """Now we don't check the len of hole and community.!!"""
 
     """1. Translate the known cards into integers."""
-    tempHole = hole
-    hole = [CT.card_translate(tempHole[0][0],tempHole[0][1]),
-            CT.card_translate(tempHole[1][0],tempHole[1][1])]
-    tempCommunity = community
-    community = []
-    for card in tempCommunity:
-        community.append(CT.card_translate(card[0],card[1]))
+    hole[0] = CT.trans_string_to_int(hole[0])
+    hole[1] = CT.trans_string_to_int(hole[1])
+    for i in range(0,len(community)):
+        community[i] = CT.trans_string_to_int(community[i])
 
-    """2. Create a deck without known cards."""
-    knownCards = hole + community
-    deck = [0,0,0,0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,0,0,0,
-            0,0,0,0,0,0,0,0,0,0,0,0,0]
-    pokerlib.init_deck(deck)
-    """   Delete known cards:"""
-    i = 0
-    lenDeck = len(deck)
-    while i < lenDeck:
-        if (deck[i] in hole) or (deck[i] in community):
-            deck.pop(i)
-            lenDeck = lenDeck - 1
-        else:
-            i = i + 1
-
-    if len(community) == 3:
-        return cal_win_odds_bf_flop(hole, community, deck)
+    """2. Call the corresponding function to calculate."""
+    if len(community) == 5:
+        return cal_win_odds_bf_river(hole, community)
     elif len(community) == 4:
-        return cal_win_odds_bf_turn(hole, community, deck)
+        return cal_win_odds_bf_turn(hole, community)
     else:
-        return cal_win_odds_bf_river(hole, community, deck)
-    debugF.close()
+        return cal_win_odds_bf_flop(hole, community)
 
-def cal_win_odds_bf_flop(hole, community, deck):
+"""cal_win_odds_bf_flop(hole,community):
+   This function will be called by the cal_win_odds_bf() method.
+   Given: hole: an array with two integers.
+          community: an array with three integers.
+   Returns: Using brute-force method, look through all the possibilities,
+            return the win odds of current state.
+            """
+def cal_win_odds_bf_flop(hole, community):
     """ The uncertainty are:
         1. Opponent's hole cards.
         2. Turn and River."""
-   # debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
+    """1. Create a deck without known cards:"""
+    deck = deck_without_known_cards(hole + community)
+    
     sumOfComparison = 0
     sumOfWin = 0
     sampleCards = [0,0,0,0] # 4 cards of uncertainty
+
+    """2. Look through all possiblities."""
     for a in range(0,44):
         sampleCards[0] = deck[a]
         for b in range(a+1,45):
@@ -73,36 +62,33 @@ def cal_win_odds_bf_flop(hole, community, deck):
                 sampleCards[2] = deck[c]
                 for d in range(c+1,47):
                     sampleCards[3] = deck[d]
-                    #DEBUGGGGGGGGGGGGGGGGGG
-                    #print('sample cards:' + str(sampleCards))
                     """There are C(2,4) possible combinations of
                        opponent's hole cards + (turn + river)"""
                     for comb in combination4:
-                        oppoHole = [sampleCards[comb[0]],sampleCards[comb[1]]]
-                        myHand = (hole + community +
-                                  [sampleCards[comb[2]],sampleCards[comb[3]]])
-                        oppoHand = ([sampleCards[comb[0]],sampleCards[comb[1]]]
-                                    + community +
-                                    [sampleCards[comb[2]],sampleCards[comb[3]]])
-                        #DEBUGGGGGGGGGGGGGGGGGG
-                        #print('myHand:' + str(myHand))
-                        #print('oppoHand:' + str(oppoHand))
                         sumOfComparison = sumOfComparison + 1
-                        myValue = pokerlib.eval_7hand(myHand)
-                        oppoValue = pokerlib.eval_7hand(oppoHand)
+                        myValue = pokerlib.eval_7hand(hole + community +
+                                                      [sampleCards[comb[2]],
+                                                       sampleCards[comb[3]]])
+                        oppoValue = pokerlib.eval_7hand([sampleCards[comb[0]],
+                                                         sampleCards[comb[1]]]
+                                                        + community +
+                                                        [sampleCards[comb[2]],
+                                                         sampleCards[comb[3]]])
                         if myValue < oppoValue:
                             sumOfWin = sumOfWin + 1
-    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
     return float(sumOfWin)/float(sumOfComparison)
 
-def cal_win_odds_bf_turn(hole, community, deck):
+def cal_win_odds_bf_turn(hole, community):
     """ The uncertainty are:
         1. Opponent's hole cards.
         2. River."""
-   # debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
-    sumOfComparison = 0
+    """1. Create a deck without known cards:"""
+    deck = deck_without_known_cards(hole + community)
+    
+    # sumOfComparison = 0 //actually = 45540
     sumOfWin = 0
     sampleCards = [0,0,0]
+    """2. Look through all possiblities."""
     for a in range(0,44):
         sampleCards[0] = deck[a]
         for b in range(a+1,45):
@@ -112,38 +98,32 @@ def cal_win_odds_bf_turn(hole, community, deck):
                 """There are C(2,3) possible combinations of
                    opponent's hole cards + river"""
                 for comb in combination3:
-                    myHand = hole + community + [sampleCards[comb[2]]]
-                    oppoHand = ([sampleCards[comb[0]],sampleCards[comb[1]]]
-                                + community + [sampleCards[comb[2]]])
-                    sumOfComparison = sumOfComparison + 1
-                    myValue = pokerlib.eval_7hand(myHand)
-                    oppoValue = pokerlib.eval_7hand(oppoHand)
+                    myValue = pokerlib.eval_7hand(hole + community
+                                                  + [sampleCards[comb[2]]])
+                    oppoValue = pokerlib.eval_7hand([sampleCards[comb[0]],
+                                                     sampleCards[comb[1]]]
+                                                    + community +
+                                                    [sampleCards[comb[2]]])
                     if myValue < oppoValue:
                         sumOfWin = sumOfWin + 1
-    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
-    return float(sumOfWin)/float(sumOfComparison)
+    return float(sumOfWin)/float(45540)
 
-def cal_win_odds_bf_river(hole, community, deck):
+def cal_win_odds_bf_river(hole, community):
     """ The uncertainty are:
         Opponent's hole cards."""
-    #debugF.write("hole: " + str(hole) + " community: " + str(community) + " deck: " + str(deck) + "\n")
-    sumOfComparison = 0
+    """1. Create a deck without known cards:"""
+    deck = deck_without_known_cards(hole + community)
+    
+    #sumOfComparison = 0  // actually = 990
     sumOfWin = 0
-    oppoC1 = 0
-    oppoC2 = 0
+    """2. Look through all the possibilities."""
     for a in range(0,44):
-        oppoC1 = deck[a]
         for b in range(a+1,45):
-            oppoC2 = deck[b]
-            myHand = hole + community
-            oppoHand = [oppoC1,oppoC2] + community
-            sumOfComparison = sumOfComparison + 1
-            myValue = pokerlib.eval_7hand(myHand)
-            oppoValue = pokerlib.eval_7hand(oppoHand)
+            myValue = pokerlib.eval_7hand(hole + community)
+            oppoValue = pokerlib.eval_7hand([deck[a],deck[b]] + community)
             if myValue < oppoValue:
                 sumOfWin = sumOfWin + 1
-    #debugF.write("odds: " + str(float(sumOfWin)/float(sumOfComparison)) + "\n")
-    return float(sumOfWin)/float(sumOfComparison)
+    return float(sumOfWin)/float(990)
 
 combination4 = [(0,1,2,3),
                 (0,2,1,3),
@@ -154,30 +134,82 @@ combination4 = [(0,1,2,3),
 combination3 = [(0,1,2),
                 (0,2,1),
                 (1,2,0)]
+
+def deck_without_known_cards(knownCards):
+    deck = [0,0,0,0,0,0,0,0,0,0,0,0,0,
+            0,0,0,0,0,0,0,0,0,0,0,0,0,
+            0,0,0,0,0,0,0,0,0,0,0,0,0,
+            0,0,0,0,0,0,0,0,0,0,0,0,0]
+    pokerlib.init_deck(deck)
+    """2.1 Delete known cards:"""
+    i = 0
+    lenDeck = len(deck)
+    while i < lenDeck:
+        if deck[i] in knownCards:
+            deck.pop(i)
+            lenDeck = lenDeck - 1
+        else:
+            i = i + 1
+    return deck
                         
 
 if __name__ == '__main__':
     import time
+    """*********************************
+    Examples: Flop Stage:
+    *********************************"""
+    """
     print('time: ' + str(time.time()))
-    print('3 com: '+ str(cal_win_odds_bf([(0,'s'),(9,'h')],
-                                         [(3,'d'),(12,'c'),(12,'d')])))
+    print('3 com: '+ str(cal_win_odds_bf(['Ts','Th'],
+                                         ['5d','Jc','Qc'])))
+    """
+
+    """*********************************
+    Examples: Turn Stage:
+    *********************************"""
+    """
     print('time: ' + str(time.time()))
-    print('4 com: '+ str(cal_win_odds_bf([(8,'s'),(8,'h')],
-                                         [(3,'d'),(9,'c'),(10,'c'),(7,'d')])))
+    print('4 com: '+ str(cal_win_odds_bf(['Ts','Th'],
+                                         ['5d','Jc','Qc','9d'])))
+    """
+
+    """*********************************
+    Examples: River Stage:
+    *********************************"""
+
     print('time: ' + str(time.time()))
-    print('5 com: '
-          + str(cal_win_odds_bf([(12,'h'),(12,'c')],
-                                [(4,'c'),(5,'c'),(6,'c'),(7,'c'),(8,'c')])))
+    print('5 com ex 1: '
+          + str(cal_win_odds_bf(['Ah','Ac'],
+                                ['6c','7c','8c','9c','Tc'])))
+    print('time: ' + str(time.time()))
+    print('5 com ex 2: '
+          + str(cal_win_odds_bf(['9h','Qh'],
+                                ['7s','Tc','4h','5h','2c'])))
+    print('time: ' + str(time.time()))
+    print('5 com ex 3: '
+          + str(cal_win_odds_bf(['9s','Ah'],
+                                ['8c','8s','Jd','9c','Td'])))
     print('time: ' + str(time.time()))
 
-    """Test result:
-time: 1396594048.670823
-0.390519440473187
-time: 1396594153.816837
-0.7185770750988142
-time: 1396594161.787293
-0.0
-time: 1396594162.25332
+
+
+""" Test result : Turn stage ( about 10s ):
+time: 1396903364.561571
+turn - sum of comparison = 45540
+4 com: 0.6987263943785683
+"""
+
+""" Test result: River stage (about half a second):
+time: 1396903570.620357
+river - sum of comparison = 990
+5 com ex 1: 0.0
+time: 1396903571.094384
+river - sum of comparison = 990
+5 com ex 2: 0.1494949494949495
+time: 1396903571.459405
+river - sum of comparison = 990
+5 com ex 3: 0.3939393939393939
+time: 1396903572.077441
 """
     
     
