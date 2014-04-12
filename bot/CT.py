@@ -2,12 +2,24 @@
 """card_translate.py"""
 import arrays
 
-"""card_translate(rank, suit):
+"""trans_string_to_int(card):
+   Given: card is a string, eg. 'Qd'.
+          card[0] is the rank. card[1] is the suit.
+   Return: An integer that is the inner representation of the card.
+
+   This procedure actually combines the card_translate() and
+   translate_from_mp_to_string() together.
+   """
+def trans_string_to_int(card):
+    cardTuple = card_translate_from_str_to_rs(card)
+    return card_translate_from_rs(cardTuple[0],cardTuple[1])
+
+"""card_translate_from_rs(rank, suit):
    Translate the card into the evaluator's inner representation and return it.
    rank: (Number) (deuce=0,trey=1,four=2,five=3,...,ace=12)
    suit: (String) 's','h','c','d'
    """
-def card_translate(rank, suit):
+def card_translate_from_rs(rank, suit):
     suitInt = 0
     if suit == 's':
         suitInt = 1 << 12
@@ -23,11 +35,11 @@ def card_translate(rank, suit):
               (1 << (16+rank)))
     return prime
 
-"""translate_from_mp_to_string(card):
+"""card_translate_from_str_to_rs(card):
    Translate a card in the MachinePoker form to the rank + suit form."""
 """eg. 'Qd' -> (10,'d')
    The return value is a tuple, (rank, suit)"""
-def translate_from_mp_to_string(card):
+def card_translate_from_str_to_rs(card):
     rank = card[0]
     suit = card[1]
     if rank == '2':
@@ -62,7 +74,13 @@ def translate_from_mp_to_string(card):
     
 
 if __name__ == '__main__':
-    print(card_translate(0,'s')) #2s
-    print(card_translate(9,'h')) #Jh
-    print(card_translate(3,'d')) #5d
-    print(card_translate(12,'c')) #Ac
+    print(trans_string_to_int('Qd'))
+    print(trans_string_to_int('Ts'))
+    print(trans_string_to_int('2h'))
+    print(trans_string_to_int('Jc'))
+    print(card_translate_from_str_to_rs('Qd'))
+    print(card_translate_from_str_to_rs('Ts'))
+    print(card_translate_from_str_to_rs('2h'))
+    print(card_translate_from_str_to_rs('Jc'))
+    print(card_translate_from_str_to_rs('Kc'))
+    print(card_translate_from_str_to_rs('7s'))
