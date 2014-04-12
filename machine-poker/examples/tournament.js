@@ -8,6 +8,10 @@ var MachinePoker = require('../lib/index')
     , RandBot = require('./bots/randBot')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
+    //, OptimistBot = require('./bots/wrapperBot')('optimistBot.py', 'OptimistBot')
+    //, PessmistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessmistBot')
+    , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'WizardBot')
+    , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json')
     , fs = require('fs');
 
@@ -27,8 +31,8 @@ function guid() {
 var gamesToRun = 10;
 
 // This is going to be a tournament, so generate an array of possible opponents
-var opponents = [CallBot, FoldBot, RandBot, RandBot2];
-var winChance = {'CallBot':0, 'FoldBot':0, 'RandBot':0, 'RandBot2':0 };
+var opponents = [CallBot, RandBot, OptimistBot, PessmistBot];
+var winChance = {'CallBot':0, 'RandBot':0 , 'OptimistBot':0, 'PessmistBot':0};
 var completedGames = 0;
 var cachedCompletedGames = 0;
 
