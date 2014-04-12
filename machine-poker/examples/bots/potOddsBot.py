@@ -20,7 +20,6 @@ else:
     game_string = open(game_data_location, 'r')
     game_info = game_string.read()
     game = json.loads(game_info)
-
     """get the game's unique ID. We use this to read/write from our persistent game data file"""
     game_id = game["gameID"]
     file_exists = os.path.isfile("data_" + game_id)
@@ -33,6 +32,10 @@ else:
         # construct the json data
         data = {}
         data["bluffChance"] = 0.5
+        data["lastBluffHand"] = 0
+        data["bluffStage"] = ""
+        data["needToUpdateBluffChance"] = 0
+        debugF.write(str(data) + "\n")
 
     #debugF.write(str(game) + "\n")
 
@@ -64,29 +67,39 @@ else:
             winOdds = float(brute_force.cal_win_odds_bf(hole, community))
             
         """Calculate the bet:"""
-        bet = abs(winOdds * pot / (1-2winOdds))
-        
+        bet = abs(winOdds * pot / (1-2*winOdds))
+        debugF.write("intial bet: " + str(bet) + "\n")
         if bet < game["betting"]["call"]:
             """The largest amout you can bet < what you need to call.
                Can only fold."""
+            debugF.write("TAFDSDASFDAS")
             debugF.write("WIN ODDS: " + str(winOdds) + " FOLDING\n")
-            print(0)
+            bet = 0
         elif game["betting"]["canRaise"] == False:
+            debugF.write("TAFDSDASFDAS")
             debugF.write("WIN ODDS: " + str(winOdds) +  " CALLING: "
                          + str(game["betting"]["call"]) + "\n")
-            print(game["betting"]["call"])
+            bet = game["betting"]["call"]
         else:
+            willBluff = random.random()
+            willBluff = (willBluff <= data["bluffChance"])
+            if willBluff:
+                bet = (int(bet/game["betting"]["raise"]) *
+                  (2 * game["betting"]["raise"]))
+            else:
+                bet = int(bet/game["betting"]["raise"]) * game["betting"]["raise"]
+            debugF.write("TAFDSDASFDAS")
             debugF.write("WIN ODDS: " + str(winOdds) +  " BET: "
-                         + str(int(bet/game["betting"]["raise"]) *
-                  game["betting"]["raise"]) + "\n")
-            print(int(bet/game["betting"]["raise"]) *
-                  game["betting"]["raise"])
+                         + str(bet) + " BLUFFING: " + str(willBluff) + "\n")
+        print(bet)
     else:
         """complete """
         print(0)
+
     """ dump our data JSON back into the file """
     data_string = json.dumps(data)
-    dataFile.seek(0)
+    if file_exists:
+        dataFile.seek(0)
     dataFile.write(data_string)
     dataFile.truncate()
     dataFile.close()
