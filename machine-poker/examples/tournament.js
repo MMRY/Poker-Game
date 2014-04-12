@@ -3,20 +3,26 @@ var startTime = new Date();
 var MachinePoker = require('../lib/index')
     , LocalSeat = MachinePoker.seats.JsLocal
     , RemoteSeat = MachinePoker.seats.Remote
-    , CallBot = require('./bots/callBot')
-    , FoldBot = require('./bots/foldBot')
-    , RandBot = require('./bots/randBot')
-    , MemoryBot = require('./bots/wrapperBot')('ai.py', 'Memory Bot')
+    //, CallBot = require('./bots/callBot')
+    //, FoldBot = require('./bots/foldBot')
+    //, RandBot = require('./bots/randBot')
+   // , AllInBot = require('./bots/wrapperBot')('allInBot.py', 'All In Bot')
+    //, OptimistBot = require('./bots/wrapperBot')('optimistBot.py', 'OptimistBot')
+    //, PessmistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessmistBot')
+    , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'WizardBot')
+    , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json')
     , fs = require('fs');
 
 
 // Number of games to run against each opponent
-var gamesToRun = 3;
+var gamesToRun = 15;
 
 // This is going to be a tournament, so generate an array of possible opponents
-var opponents = [CallBot, FoldBot, RandBot];
-var winChance = {'CallBot':0, 'FoldBot':0, 'RandBot':0 };
+//var opponents = [CallBot, RandBot, AllInBot, OptimistBot, PessmistBot];
+//var winChance = {'CallBot':0, 'RandBot':0 , 'All In Bot':0, 'OptimistBot':0, 'PessmistBot':0};
+var opponents = [WizardBot];
+var winChance = {'WizardBot':0};
 var completedGames = 0;
 var cachedCompletedGames = 0;
 

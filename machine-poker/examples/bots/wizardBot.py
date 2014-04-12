@@ -29,6 +29,11 @@ else:
     game_info = game_string.read()
     game = json.loads(game_info)
 
+    """get the game's unique ID. We use this to read/write from our persistent game data file"""
+    game_id = game["game_ID"]
+    dataFile = open("data_" + game_id, 'a')
+    dataFile.write("Testing")
+
     #debugF.write(str(game) + "\n")
 
     """1. Get the current amount in pot"""
@@ -65,10 +70,10 @@ else:
             elif bettingAmount(winOdds, chips, 0.52, 4,
                                game["betting"]["raise"]):
                 a = 1
-            elif bettingAmount(winOdds, chips, 0.45, 2,
+            elif bettingAmount(winOdds, chips, 0.40, 2,
                                game["betting"]["raise"]):
                 a = 1
-            elif bettingAmount(winOdds, chips, 0.35, 1,
+            elif bettingAmount(winOdds, chips, 0.30, 1,
                                game["betting"]["raise"]):
                 a = 1
             else:
