@@ -7,6 +7,8 @@ import json
 import monte_carlo
 import brute_force
 import CT
+import os
+import random
 
 debugF = open('debugPotOddsBot','a')
 if (len(sys.argv) < 2):
@@ -18,6 +20,19 @@ else:
     game_string = open(game_data_location, 'r')
     game_info = game_string.read()
     game = json.loads(game_info)
+
+    """get the game's unique ID. We use this to read/write from our persistent game data file"""
+    game_id = game["gameID"]
+    file_exists = os.path.isfile("data_" + game_id)
+    if file_exists:
+        dataFile = open("data_" + game_id, 'r+')
+        fileData = dataFile.read()
+        data = json.loads(fileData)
+    else:
+        dataFile = open("data_" + game_id, 'w')
+        # construct the json data
+        data = {}
+        data["bluffChance"] = 0.5
 
     #debugF.write(str(game) + "\n")
 
@@ -62,7 +77,13 @@ else:
             print(int(bet/game["betting"]["raise"]) *
                   game["betting"]["raise"])
     else:
-        """complete"""
+        """complete """
         print(0)
+    """ dump our data JSON back into the file """
+    data_string = json.dumps(data)
+    dataFile.seek(0)
+    dataFile.write(data_string)
+    dataFile.truncate()
+    dataFile.close()
     debugF.close()
     sys.exit(0)

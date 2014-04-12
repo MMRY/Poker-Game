@@ -7,14 +7,17 @@ import json
 import monte_carlo
 import brute_force
 import CT
+import random
 
 
 def bettingAmount(winOdds, chips, minCap, multiplyer, callAmount):
     if winOdds >= minCap:
         if chips >= multiplyer * callAmount:
             print(multiplyer * callAmount)
+            debugF.write("odds " + str(winOdds) + " betting " + str (multiplyer * callAmount) + "\n")
         else:
             print(chips)
+            debugF.write("odds " + str(winOdds) + " betting " + str (chips) + " all in \n")
         return True
     return False
 
@@ -30,9 +33,15 @@ else:
     game = json.loads(game_info)
 
     """get the game's unique ID. We use this to read/write from our persistent game data file"""
-    game_id = game["game_ID"]
+    game_id = game["gameID"]
     dataFile = open("data_" + game_id, 'a')
-    dataFile.write("Testing")
+    fileData = dataFile.read()
+    if len(fileData) > 0:
+        data = json.loads(fileData)
+    else:
+        # construct the json data
+        data = []
+        data["bluffChance"] = 0.5
 
     #debugF.write(str(game) + "\n")
 
@@ -77,6 +86,7 @@ else:
                                game["betting"]["raise"]):
                 a = 1
             else:
+                debugF.write("odds " + str(winOdds) + " betting 0 \n")
                 print(0)
         else:
             if chips < game["betting"]["call"]:
@@ -88,5 +98,6 @@ else:
         """complete"""
         print(0)
     debugF.close()
+    
     sys.exit(0)
     
