@@ -36,6 +36,7 @@
 
     function MachinePoker(opts) {
       this.opts = opts;
+      console.log(opts);
       if (this.opts == null) {
         this.opts = {};
       }
@@ -45,6 +46,7 @@
       this.observers = [];
       this.players = [];
       this.currentRound = 1;
+      this.gameID = this.opts.gameID || "default";
     }
 
     MachinePoker.prototype.addObserver = function(obs) {
@@ -87,7 +89,7 @@
     MachinePoker.prototype.run = function() {
       var game,
         _this = this;
-      game = new Game(this.players, this.betting, this.currentRound);
+      game = new Game(this.players, this.betting, this.currentRound, this.gameID);
       game.on('roundStart', function() {
         return _this.emit('roundStart', game.status(Game.STATUS.PRIVILEGED));
       });

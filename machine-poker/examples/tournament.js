@@ -6,17 +6,29 @@ var MachinePoker = require('../lib/index')
     , CallBot = require('./bots/callBot')
     , FoldBot = require('./bots/foldBot')
     , RandBot = require('./bots/randBot')
-    , MemoryBot = require('./bots/wrapperBot')('ai.py', 'Memory Bot')
+    , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
+    , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json')
     , fs = require('fs');
 
+// Functions to generate a GUID
+// Used to generate a short random string to be used in guid()
+function S4() {
+    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+};
+
+// Used to generate a unique random string to be used
+// as a globally unique ID
+function guid() {
+    return S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() +  "-" + S4() + S4() + S4();
+}
 
 // Number of games to run against each opponent
-var gamesToRun = 3;
+var gamesToRun = 10;
 
 // This is going to be a tournament, so generate an array of possible opponents
-var opponents = [CallBot, FoldBot, RandBot];
-var winChance = {'CallBot':0, 'FoldBot':0, 'RandBot':0 };
+var opponents = [CallBot, FoldBot, RandBot, RandBot2];
+var winChance = {'CallBot':0, 'FoldBot':0, 'RandBot':0, 'RandBot2':0 };
 var completedGames = 0;
 var cachedCompletedGames = 0;
 
@@ -46,7 +58,8 @@ for (var i = 0; i < opponents.length; i += 1) {
 		//var fileLoggerTwo = MachinePoker.observers.fileLogger(resultFileName);
 		// Generate a new table
 		var table = MachinePoker.create({
-	  		maxRounds: 100
+	  		maxRounds: 100,
+	  		gameID: "poker" + guid()
 		});
 
 		// Add the players to the table
