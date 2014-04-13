@@ -10,10 +10,7 @@ import CT
 import os
 import random
 
-debugF = open('debugPotOddsBot6243','a')
 if (len(sys.argv) < 2):
-    debugF.write(sys.argv + '\n')
-    debugF.close()
     sys.exit(1)
 else:
     game_data_location = sys.argv[1]
@@ -22,6 +19,7 @@ else:
     game = json.loads(game_info)
     """get the game's unique ID. We use this to read/write from our persistent game data file"""
     game_id = game["gameID"]
+    debugF = open("debugPotOddsBot" + game_id,'a')
     file_exists = os.path.isfile("data_" + game_id)
     #debugF.write("file exists: " + str(file_exists) + " \n")
     if file_exists:
@@ -36,8 +34,8 @@ else:
         data = {}
         data["bluffChance"] = 0.5
         data["lastBluffHand"] = 0
-        data["bluffStage"] = ""
         data["needToUpdateBluffChance"] = 0
+        data["looseness"] = 0.5
         #debugF.write(str(data) + "\n")
     #debugF.write(str(game) + "\n")
 
@@ -112,7 +110,8 @@ else:
             bet = int(bet/game["betting"]["raise"]) * game["betting"]["raise"]
             action = "RAISING"
             willBluff = random.random()
-            willBluff = (data["lastBluffHand"] != game["hand"]) and (willBluff <= data["bluffChance"])
+            """ Will bluff if we haven't already bluffed this hand, the random number is less than the bluff chance, and the raise amount is less than 50"""
+            willBluff = (data["lastBluffHand"] != game["hand"]) and (willBluff <= data["bluffChance"]) and (game["betting"]["raise"] < 50)
             if willBluff:
                 bet += (2 * game["betting"]["raise"])
                 action += " BLUFFING"
