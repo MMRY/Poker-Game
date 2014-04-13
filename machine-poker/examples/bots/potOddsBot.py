@@ -53,16 +53,19 @@ else:
     community = []
     if len(game["community"]) > 0:
         community = game["community"]
-        """lenCom = len(community)
-        for i in range(0,lenCom):
-            community[i] = CT.trans_string_to_int(community[i])"""
     #debugF.write("hole " + str(hole) + " community: " + str(community) + " ")
     #debugF.write("here now \n")
+
+    """ This is where we modify our bluff chance based on the opponent's response to our bluff.
+        If they called the bluff (call, raise) then we will decrease our bluff chance
+        If they folded, we increase our bluff chance
+        Thus we learn from successful or unsuccessful bluffs """
     if data["needToUpdateBluffChance"]:
+        """ Get our opponent's actions """
         for player in game["players"]:
             if player["name"] != game["self"]["name"]:
                 opponent = player
-        last_action = "NOT SHOULD HAPPEN"
+        last_action = ""
         if "river" in opponent["actions"] and (len(opponent["actions"]["river"]) > 0):
             last_action = opponent["actions"]["river"][-1]["type"]
         elif "turn" in opponent["actions"] and (len(opponent["actions"]["turn"]) > 0):
@@ -71,7 +74,9 @@ else:
             last_action = opponent["actions"]["flop"][-1]["type"]
         elif "pre-flop" in opponent["actions"] and (len(opponent["actions"]["pre-flop"]) > 0):
             last_action = opponent["actions"]["pre-flop"][-1]["type"]
-        debugF.write("last opponent action: " + str(last_action) + "\n")
+        #debugF.write("last opponent action: " + str(last_action) + "\n")
+        """ Modify the bluff chance. If they folded, increase by a maximum of 0.2
+            If they called it, decrease the bluff chance by half """
         if last_action == "fold":
             # don't want to increase bluff chance too much
             data["bluffChance"] = data["bluffChance"] + min(float((data["bluffChance"] / 2)), 0.2)
