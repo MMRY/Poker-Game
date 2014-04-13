@@ -27,7 +27,7 @@ module.exports = function(varA, varB) {
         // Returns the integer value that the agent wants to bet
         function update(game) {
             // If the game is complete, we don't need to update
-            if (game.state !== "complete") {
+            //if (game.state !== "complete") {
 
                 // Require execSync so we can call the python AI code
                 var execSync = require('execSync');
@@ -83,7 +83,7 @@ module.exports = function(varA, varB) {
                 }
 
                 return bet;
-            }
+            //}
         };
 
         return { update: update, info: info };

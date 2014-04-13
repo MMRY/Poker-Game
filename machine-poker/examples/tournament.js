@@ -8,8 +8,8 @@ var MachinePoker = require('../lib/index')
     , RandBot = require('./bots/randBot')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
-    //, OptimistBot = require('./bots/wrapperBot')('optimistBot.py', 'OptimistBot')
-    //, PessmistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessmistBot')
+    , OptimistBot = require('./bots/wrapperBot')('optimistBot.py', 'OptimistBot')
+    , PessmistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessmistBot')
     , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'WizardBot')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json')
@@ -28,7 +28,7 @@ function guid() {
 }
 
 // Number of games to run against each opponent
-var gamesToRun = 10;
+var gamesToRun = 1;
 
 // This is going to be a tournament, so generate an array of possible opponents
 var opponents = [CallBot, RandBot, OptimistBot, PessmistBot];
@@ -53,6 +53,13 @@ for (var i = 0; i < opponents.length; i += 1) {
 			// If we have more than 1000 chips, we won the game
 			if (win) {
 				winChance[enemyName] += 1;
+			}
+
+			// TESTING: Delete the game file used in the python code when we're done
+			console.log(this);
+			var deleteFileName = "data_" + this.gameID;
+			if (fs.existsSync(deleteFileName)) {
+				fs.unlinkSync(deleteFileName);
 			}
 
 			// Otherwise, we're done

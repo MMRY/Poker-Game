@@ -6,6 +6,7 @@ var MachinePoker = require('../lib/index')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'Wizard Bot')
     , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
+    , SmartBot = require('./bots/smartBot')
     , narrator = MachinePoker.observers.narrator
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json');
 
@@ -27,7 +28,7 @@ var table = MachinePoker.create({
 });
 
 
-  var players = [LocalSeat.create(MemoryBot), LocalSeat.create(WizardBot)];
+  var players = [LocalSeat.create(MemoryBot), LocalSeat.create(SmartBot)];
   table.addPlayers(players);
   table.on('tournamentClosed', function (a, b) { process.exit() } );
   table.start();
