@@ -6,7 +6,7 @@ var MachinePoker = require('../lib/index')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'Wizard Bot')
     , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
-    , SmartBot = require('./bots/smartBot')
+    , SmartBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessimistBot')
     , narrator = MachinePoker.observers.narrator
     , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json');
 

@@ -10,7 +10,7 @@ import CT
 import os
 import random
 
-debugF = open('debugPotOddsBot','a')
+debugF = open('debugPotOddsBot6243','a')
 if (len(sys.argv) < 2):
     debugF.write(sys.argv + '\n')
     debugF.close()
@@ -23,10 +23,13 @@ else:
     """get the game's unique ID. We use this to read/write from our persistent game data file"""
     game_id = game["gameID"]
     file_exists = os.path.isfile("data_" + game_id)
+    #debugF.write("file exists: " + str(file_exists) + " \n")
     if file_exists:
         dataFile = open("data_" + game_id, 'r+')
         fileData = dataFile.read()
+        #debugF.write(str(fileData) + "\n")
         data = json.loads(fileData)
+        #debugF.write(str(data) + "\n")
     else:
         dataFile = open("data_" + game_id, 'w')
         # construct the json data
@@ -35,8 +38,7 @@ else:
         data["lastBluffHand"] = 0
         data["bluffStage"] = ""
         data["needToUpdateBluffChance"] = 0
-        debugF.write(str(data) + "\n")
-
+        #debugF.write(str(data) + "\n")
     #debugF.write(str(game) + "\n")
 
     """1. Get the current amount in pot"""
@@ -47,16 +49,38 @@ else:
     """2. Check the game state:"""
     gameState = game["state"]
     winOdds = 0
-    hole = [CT.trans_string_to_int(game["self"]["cards"][0]),
-            CT.trans_string_to_int(game["self"]["cards"][1])]
+    hole = game["self"]["cards"]
     community = []
     if len(game["community"]) > 0:
         community = game["community"]
-        lenCom = len(community)
+        """lenCom = len(community)
         for i in range(0,lenCom):
-            community[i] = CT.trans_string_to_int(community[i])
+            community[i] = CT.trans_string_to_int(community[i])"""
     #debugF.write("hole " + str(hole) + " community: " + str(community) + " ")
-    
+    #debugF.write("here now \n")
+    if data["needToUpdateBluffChance"]:
+        for player in game["players"]:
+            if player["name"] != game["self"]["name"]:
+                opponent = player
+        last_action = "NOT SHOULD HAPPEN"
+        if "river" in opponent["actions"] and (len(opponent["actions"]["river"]) > 0):
+            last_action = opponent["actions"]["river"][-1]["type"]
+        elif "turn" in opponent["actions"] and (len(opponent["actions"]["turn"]) > 0):
+            last_action = opponent["actions"]["turn"][-1]["type"]
+        elif "flop" in opponent["actions"] and (len(opponent["actions"]["flop"]) > 0):
+            last_action = opponent["actions"]["flop"][-1]["type"]
+        elif "pre-flop" in opponent["actions"] and (len(opponent["actions"]["pre-flop"]) > 0):
+            last_action = opponent["actions"]["pre-flop"][-1]["type"]
+        debugF.write("last opponent action: " + str(last_action) + "\n")
+        if last_action == "fold":
+            # don't want to increase bluff chance too much
+            data["bluffChance"] = data["bluffChance"] + min(float((data["bluffChance"] / 2)), 0.2)
+        else:
+            data["bluffChance"] = data["bluffChance"] - float((data["bluffChance"] / 2))
+        if data["bluffChance"] > 1:
+            data["bluffChance"] = 1
+        data["needToUpdateBluffChance"] = False
+
     if (gameState == "pre-flop" or
         gameState == "flop" or
         gameState == "turn" or
@@ -65,43 +89,52 @@ else:
             winOdds = float(monte_carlo.cal_win_odds_mc(hole, community))
         else:
             winOdds = float(brute_force.cal_win_odds_bf(hole, community))
-            
-        """Calculate the bet:"""
-        bet = abs(winOdds * pot / (1-2*winOdds))
-        debugF.write("intial bet: " + str(bet) + "\n")
+        """Calculate the bet (Pot odds):"""
+        bet = abs(winOdds * pot / (1-winOdds))
+        #debugF.write("intial bet: " + str(bet) + " win odds " + str(winOdds) + " pot " + str(pot) + " \n")
+
+        debugF.write(str(game["betting"]) + "\n")
         if bet < game["betting"]["call"]:
             """The largest amout you can bet < what you need to call.
                Can only fold."""
-            debugF.write("TAFDSDASFDAS")
-            debugF.write("WIN ODDS: " + str(winOdds) + " FOLDING\n")
             bet = 0
+            action = "FOLDING"
         elif game["betting"]["canRaise"] == False:
-            debugF.write("TAFDSDASFDAS")
-            debugF.write("WIN ODDS: " + str(winOdds) +  " CALLING: "
-                         + str(game["betting"]["call"]) + "\n")
             bet = game["betting"]["call"]
+            action = "CALLING"
         else:
+            """Determine if we will bluff or not based on our bluffChance variable"""
+            bet = int(bet/game["betting"]["raise"]) * game["betting"]["raise"]
+            action = "RAISING"
             willBluff = random.random()
-            willBluff = (willBluff <= data["bluffChance"])
+            willBluff = (data["lastBluffHand"] != game["hand"]) and (willBluff <= data["bluffChance"])
             if willBluff:
-                bet = (int(bet/game["betting"]["raise"]) *
-                  (2 * game["betting"]["raise"]))
-            else:
-                bet = int(bet/game["betting"]["raise"]) * game["betting"]["raise"]
-            debugF.write("TAFDSDASFDAS")
-            debugF.write("WIN ODDS: " + str(winOdds) +  " BET: "
-                         + str(bet) + " BLUFFING: " + str(willBluff) + "\n")
+                bet += (2 * game["betting"]["raise"])
+                action += " BLUFFING"
+                data["lastBluffHand"] = game["hand"]
+                data["needToUpdateBluffChance"] = True
+        debugF.write("WIN ODDS: " + str(winOdds) + " GAME STATE: " + str(gameState) +  " BET: "
+                         + str(bet) + " " + action + "\n")
         print(bet)
     else:
         """complete """
+        #debugF.write(str(game["self"]["position"]) + "\n")
+        win = (game["winners"][0]["position"] == game["self"]["position"])
+        if win:
+            debugF.write("WON " + str(game["self"]) + "\n")
+        else:
+            debugF.write("LOST " + str(game["players"]) + "\n")
+        #debugF.write("WIN? " + str(win) + " our chips: " + game["self"]["chips"] + " \n")
         print(0)
 
     """ dump our data JSON back into the file """
     data_string = json.dumps(data)
+    debugF.write(data_string + " \n")
     if file_exists:
         dataFile.seek(0)
     dataFile.write(data_string)
-    dataFile.truncate()
+    if file_exists:
+        dataFile.truncate()
     dataFile.close()
     debugF.close()
     sys.exit(0)

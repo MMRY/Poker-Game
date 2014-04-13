@@ -8,7 +8,7 @@ import monte_carlo
 import brute_force
 import CT
 
-debugF = open('debugPotOddsBot','a')
+debugF = open('debugPessimistBot','a')
 if (len(sys.argv) < 2):
     debugF.write(sys.argv + '\n')
     debugF.close()

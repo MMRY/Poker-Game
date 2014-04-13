@@ -1,0 +1,435 @@
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 40 RAISING BLUFFING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.291919191919 GAME STATE: river BET: 0 RAISING
+WIN ODDS: 0.6192 GAME STATE: pre-flop BET: 75 RAISING BLUFFING
+WIN ODDS: 0.6204 GAME STATE: pre-flop BET: 360 RAISING
+WIN ODDS: 0.6176 GAME STATE: pre-flop BET: 1410 RAISING
+WON {u'blind': 10, u'payout': 1000, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 75}, {u'type': u'raise', u'bet': 360}, {u'type': u'allIn', u'bet': 555}]}, u'hand': [u'Ad', u'Kd', u'Qd', u'Jd', u'Ts'], u'cards': [u'Kd', u'Jd'], u'state': u'allIn', u'handName': u'Straight', u'ante': 0, u'position': 0, u'chips': 2000, u'wagered': 0}
+WIN ODDS: 0.5716 GAME STATE: pre-flop BET: 15 RAISING
+WIN ODDS: 0.5624 GAME STATE: pre-flop BET: 15 CALLING
+WIN ODDS: 0.5404 GAME STATE: flop BET: 920 RAISING BLUFFING
+WIN ODDS: 0.5306 GAME STATE: flop BET: 45 CALLING
+WON {u'blind': 5, u'payout': 1000, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}, {u'type': u'call', u'bet': 15}], u'flop': [{u'type': u'raise', u'bet': 920}, {u'type': u'allIn', u'bet': 45}]}, u'hand': [u'5c', u'4h', u'3h', u'2c', u'Ah(Low)'], u'cards': [u'4h', u'Ah'], u'state': u'allIn', u'handName': u'Straight', u'ante': 0, u'position': 1, u'chips': 2000, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5622 GAME STATE: pre-flop BET: 15 RAISING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Jc', u'Qd'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1010, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8c', u'8s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.352 GAME STATE: pre-flop BET: 0 RAISING
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'5d', u'3s'], u'state': u'active', u'ante': 0, u'chips': 990, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1010, u'wagered': 0}]
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Qd', u'6s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3238 GAME STATE: pre-flop BET: 0 RAISING
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'6h', u'3d'], u'state': u'active', u'ante': 0, u'chips': 990, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1010, u'wagered': 0}]
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3d', u'4h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.327 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'2d', u'4d'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1010, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Qs', u'9s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5964 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Qc', u'Ks'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1025, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7d', u'9d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1030, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4678 GAME STATE: pre-flop BET: 0 RAISING
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'9c', u'Tc'], u'state': u'active', u'ante': 0, u'chips': 975, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1025, u'wagered': 0}]
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Th', u'Qh'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1030, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5466 GAME STATE: pre-flop BET: 15 RAISING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Kd', u'8c'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1040, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Td', u'Qh'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1045, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5624 GAME STATE: pre-flop BET: 15 RAISING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Tc', u'Jc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1055, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7d', u'6h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1060, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.7732 GAME STATE: pre-flop BET: 45 RAISING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Jc', u'Jd'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1070, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'9s', u'2s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1075, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.516 GAME STATE: pre-flop BET: 15 RAISING
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Js', u'9d'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1085, u'wagered': 0}
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'2s', u'Qs'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1090, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3892 GAME STATE: pre-flop BET: 0 RAISING
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'Ks', u'9c'], u'state': u'active', u'ante': 0, u'chips': 915, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1085, u'wagered': 0}]
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Js', u'Jh'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1090, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5604 GAME STATE: pre-flop BET: 15 RAISING
+{u'canRaise': False, u'call': 15, u'raise': 30}
+WIN ODDS: 0.5526 GAME STATE: pre-flop BET: 15 CALLING
+{u'canRaise': True, u'call': 130, u'raise': 260}
+WIN ODDS: 0.9876 GAME STATE: flop BET: 15860 RAISING
+WON {u'blind': 5, u'payout': 910, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}, {u'type': u'call', u'bet': 15}], u'flop': [{u'type': u'allIn', u'bet': 1055}]}, u'hand': [u'Kd', u'Ks', u'Kh', u'9d', u'9s'], u'cards': [u'Kh', u'9s'], u'state': u'allIn', u'handName': u'Full house', u'ante': 0, u'position': 1, u'chips': 2000, u'wagered': 0}
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3316 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'4h', u'2h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1010, u'wagered': 0}
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3c', u'Js'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{"lastBluffHand": 1, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4876 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'5d', u'7h'], u'state': u'active', u'ante': 0, u'chips': 990, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1010, u'wagered': 0}]
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7s', u'Ts'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{"lastBluffHand": 1, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.561 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Ac', u'5h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1025, u'wagered': 0}
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3s', u'2d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1030, u'wagered': 0}
+{"lastBluffHand": 1, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4268 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'Qd', u'7d'], u'state': u'active', u'ante': 0, u'chips': 975, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1025, u'wagered': 0}]
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'4h', u'5d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1030, u'wagered': 0}
+{"lastBluffHand": 1, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5978 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 1, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7d', u'5s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1005, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5512 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 2, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Ac', u'6h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1015, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.7, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'2s', u'7c'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1020, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.7, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5304 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.7} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'8d', u'Qs'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1030, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.7, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7s', u'Jd'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1035, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.7, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.6524 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 6, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 0.7} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Ac', u'Kd'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1045, u'wagered': 0}
+{"lastBluffHand": 6, "bluffChance": 0.8999999999999999, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8s', u'8h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1050, u'wagered': 0}
+{"lastBluffHand": 6, "needToUpdateBluffChance": false, "bluffChance": 0.8999999999999999, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3542 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 8, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 0.8999999999999999} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'4h', u'6s'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1060, u'wagered': 0}
+{"lastBluffHand": 8, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'9c', u'2d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1065, u'wagered': 0}
+{"lastBluffHand": 8, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3672 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 10, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'7h', u'4d'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1075, u'wagered': 0}
+{"lastBluffHand": 10, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'5c', u'As'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1080, u'wagered': 0}
+{"lastBluffHand": 10, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3204 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 12, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'6c', u'3d'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1090, u'wagered': 0}
+{"lastBluffHand": 12, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'4h', u'5h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1095, u'wagered': 0}
+{"lastBluffHand": 12, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4198 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 14, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'5s', u'8s'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1105, u'wagered': 0}
+{"lastBluffHand": 14, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3h', u'Qd'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1110, u'wagered': 0}
+{"lastBluffHand": 14, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.438 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 16, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'6c', u'Th'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1120, u'wagered': 0}
+{"lastBluffHand": 16, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6s', u'2h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1125, u'wagered': 0}
+{"lastBluffHand": 16, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4636 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 18, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'4s', u'Qd'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1135, u'wagered': 0}
+{"lastBluffHand": 18, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3s', u'4d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1140, u'wagered': 0}
+{"lastBluffHand": 18, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.469 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 20, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'3s', u'Qc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1150, u'wagered': 0}
+{"lastBluffHand": 20, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6s', u'Ad'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1155, u'wagered': 0}
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.484 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 22, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'Jh', u'6h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1165, u'wagered': 0}
+{"lastBluffHand": 22, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Jh', u'5h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1170, u'wagered': 0}
+{"lastBluffHand": 22, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4888 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 24, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'Kh', u'4s'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1180, u'wagered': 0}
+{"lastBluffHand": 24, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Qc', u'2c'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1185, u'wagered': 0}
+{"lastBluffHand": 24, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5644 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 26, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Jh', u'Th'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1195, u'wagered': 0}
+{"lastBluffHand": 26, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'9c', u'7h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1200, u'wagered': 0}
+{"lastBluffHand": 26, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3714 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 28, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 1} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'9d', u'4s'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1210, u'wagered': 0}
+{"lastBluffHand": 28, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 10, u'raise': 25}
+WIN ODDS: 0.4996 GAME STATE: pre-flop BET: 75 RAISING BLUFFING
+{"lastBluffHand": 29, "needToUpdateBluffChance": true, "bluffChance": 1, "bluffStage": ""} 
+{u'canRaise': True, u'call': 60, u'raise': 120}
+WIN ODDS: 0.4994 GAME STATE: pre-flop BET: 120 RAISING
+{"lastBluffHand": 29, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 420, u'raise': 780}
+WIN ODDS: 0.4872 GAME STATE: pre-flop BET: 780 RAISING
+{"lastBluffHand": 29, "bluffChance": 1, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 0, u'raise': 10}
+WIN ODDS: 0.4412 GAME STATE: flop BET: 1400 RAISING
+{"lastBluffHand": 29, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': -790, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 75}, {u'type': u'raise', u'bet': 120}, {u'type': u'raise', u'bet': 780}], u'flop': [{u'type': u'allIn', u'bet': 225}]}, u'hand': [u'7h', u'7d', u'Ah', u'Ks', u'Jh'], u'cards': [u'Ks', u'2h'], u'state': u'allIn', u'handName': u'One pair', u'ante': 0, u'chips': 420, u'wagered': 0}, {u'blind': 5, u'payout': 790, u'name': u'PessimistBot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}, {u'type': u'raise', u'bet': 125}, {u'type': u'raise', u'bet': 480}, {u'type': u'allIn', u'bet': 165}]}, u'hand': [u'Td', u'Ts', u'7h', u'7d', u'Ah'], u'cards': [u'Td', u'Ts'], u'state': u'allIn', u'handName': u'Two pair', u'ante': 0, u'chips': 1580, u'wagered': 0}]
+{"lastBluffHand": 29, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3854 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 30, "bluffChance": 1, "needToUpdateBluffChance": true, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'3d', u'Tc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 430, u'wagered': 0}
+{"lastBluffHand": 30, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Qh', u'5s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 435, u'wagered': 0}
+{"lastBluffHand": 30, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4138 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 32, "bluffChance": 1, "needToUpdateBluffChance": true, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'7h', u'8c'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 445, u'wagered': 0}
+{"lastBluffHand": 32, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Js', u'7d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 450, u'wagered': 0}
+{"lastBluffHand": 32, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5728 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 34, "bluffChance": 1, "needToUpdateBluffChance": true, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Ac', u'7h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 460, u'wagered': 0}
+{"lastBluffHand": 34, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Td', u'4s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 465, u'wagered': 0}
+{"lastBluffHand": 34, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.625 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 36, "bluffChance": 1, "needToUpdateBluffChance": true, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'6c', u'6h'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 475, u'wagered': 0}
+{"lastBluffHand": 36, "needToUpdateBluffChance": false, "bluffChance": 1, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Kc', u'2c'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 480, u'wagered': 0}
+{"lastBluffHand": 36, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 1} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3358 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 38, "bluffChance": 1, "needToUpdateBluffChance": true, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Ad', u'6s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1005, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.584 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+{u'canRaise': False, u'call': 15, u'raise': 30}
+WIN ODDS: 0.5962 GAME STATE: pre-flop BET: 15 CALLING
+{"lastBluffHand": 0, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 60, u'raise': 120}
+WIN ODDS: 0.624 GAME STATE: flop BET: 120 RAISING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+{u'canRaise': False, u'call': 60, u'raise': 120}
+WIN ODDS: 0.633 GAME STATE: flop BET: 60 CALLING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+{u'canRaise': True, u'call': 400, u'raise': 800}
+WIN ODDS: 0.6376 GAME STATE: turn BET: 2400 RAISING BLUFFING
+{"lastBluffHand": 2, "bluffChance": 0.5, "needToUpdateBluffChance": true, "bluffStage": ""} 
+last opponent action: allIn
+LOST [{u'blind': 10, u'name': u'PessimistBot', u'actions': {u'turn': [{u'type': u'raise', u'bet': 400}, {u'type': u'allIn', u'bet': 380}], u'pre-flop': [{u'type': u'raise', u'bet': 25}], u'flop': [{u'type': u'raise', u'bet': 60}, {u'type': u'raise', u'bet': 120}]}, u'hand': [u'9c', u'9h', u'7c', u'7h', u'Ah'], u'cards': [u'9h', u'Ah'], u'state': u'allIn', u'handName': u'Two pair', u'ante': 0, u'chips': 995, u'wagered': 0}, {u'blind': 5, u'name': u'Memory Bot', u'actions': {u'turn': [{u'type': u'allIn', u'bet': 790}], u'pre-flop': [{u'type': u'raise', u'bet': 15}, {u'type': u'call', u'bet': 15}], u'flop': [{u'type': u'raise', u'bet': 120}, {u'type': u'call', u'bet': 60}]}, u'hand': [u'9c', u'9d', u'7c', u'7h', u'As'], u'cards': [u'As', u'9d'], u'state': u'allIn', u'handName': u'Two pair', u'ante': 0, u'chips': 1005, u'wagered': 0}]
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6s', u'4h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1010, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5226 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'9d', u'Jh'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1020, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.566 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'8c', u'Kc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1010, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8h', u'5h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1015, u'wagered': 0}
+{"lastBluffHand": 0, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5264 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'3s', u'Ad'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1025, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8s', u'Ts'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1030, u'wagered': 0}
+{"lastBluffHand": 0, "bluffChance": 0.5, "needToUpdateBluffChance": 0, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5306 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'2h', u'Ad'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1040, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffStage": "", "bluffChance": 0.5} 
+{u'canRaise': True, u'call': 10, u'raise': 25}
+WIN ODDS: 0.3584 GAME STATE: pre-flop BET: 50 RAISING BLUFFING
+{"lastBluffHand": 6, "bluffChance": 0.5, "needToUpdateBluffChance": true, "bluffStage": ""} 
+last opponent action: raise
+{u'canRaise': True, u'call': 35, u'raise': 70}
+WIN ODDS: 0.366 GAME STATE: pre-flop BET: 70 RAISING
+{"lastBluffHand": 6, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+{u'canRaise': True, u'call': 175, u'raise': 315}
+WIN ODDS: 0.353 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 6, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+LOST [{u'blind': 10, u'payout': -130, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 50}, {u'type': u'raise', u'bet': 70}, {u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 910, u'wagered': 0}, {u'blind': 5, u'payout': 130, u'name': u'PessimistBot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}, {u'type': u'raise', u'bet': 75}, {u'type': u'raise', u'bet': 210}]}, u'cards': [u'Kh', u'Ah'], u'state': u'active', u'ante': 0, u'chips': 1090, u'wagered': 0}]
+{"lastBluffHand": 6, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4746 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 6, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'Ad', u'3s'], u'state': u'active', u'ante': 0, u'chips': 1095, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 905, u'wagered': 0}]
+{"lastBluffHand": 6, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3d', u'3s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 910, u'wagered': 0}
+{"lastBluffHand": 6, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6h', u'4h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1005, u'wagered': 0}
+{"lastBluffHand": 0, "needToUpdateBluffChance": 0, "bluffChance": 0.5, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4884 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 2, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 0.5} 
+last opponent action: raise
+{u'canRaise': False, u'call': 30, u'raise': 60}
+WIN ODDS: 0.4914 GAME STATE: pre-flop BET: 30 CALLING
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 90, u'raise': 180}
+WIN ODDS: 0.673 GAME STATE: flop BET: 360 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 155, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}, {u'type': u'call', u'bet': 30}], u'flop': [{u'type': u'raise', u'bet': 360}]}, u'cards': [u'Qd', u'6c'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1160, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7s', u'Qc'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1165, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5696 GAME STATE: pre-flop BET: 15 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 15}]}, u'cards': [u'Ts', u'Kc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1175, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'7c', u'6s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1180, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.7436 GAME STATE: pre-flop BET: 30 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'Td', u'Ts'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1190, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'4s', u'Qd'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1195, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.7916 GAME STATE: pre-flop BET: 45 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Qd', u'Qs'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1205, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8d', u'8s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1210, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4968 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'4c', u'Jc'], u'state': u'active', u'ante': 0, u'chips': 795, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1205, u'wagered': 0}]
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'8h', u'Js'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1210, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.7652 GAME STATE: pre-flop BET: 45 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 45}]}, u'cards': [u'Js', u'Jc'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1220, u'wagered': 0}
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'9c', u'5s'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1225, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3676 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'8d', u'Qs'], u'state': u'active', u'ante': 0, u'chips': 780, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1220, u'wagered': 0}]
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Ac', u'4d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1225, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.484 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'3d', u'Jd'], u'state': u'active', u'ante': 0, u'chips': 780, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1220, u'wagered': 0}]
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Jd', u'7h'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1225, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3722 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffChance": 0.25, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'9s', u'As'], u'state': u'active', u'ante': 0, u'chips': 780, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1220, u'wagered': 0}]
+{"lastBluffHand": 2, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.25} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6d', u'9d'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1225, u'wagered': 0}
+{"lastBluffHand": 2, "bluffChance": 0.25, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.327 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 20, "needToUpdateBluffChance": true, "bluffChance": 0.25, "bluffStage": ""} 
+last opponent action: fold
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'5h', u'3d'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 1235, u'wagered': 0}
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.375} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'3h', u'Jc'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1240, u'wagered': 0}
+{"lastBluffHand": 20, "bluffChance": 0.375, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3474 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffChance": 0.375, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'Th', u'Tc'], u'state': u'active', u'ante': 0, u'chips': 765, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1235, u'wagered': 0}]
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.375} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Kh', u'Jc'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1240, u'wagered': 0}
+{"lastBluffHand": 20, "bluffChance": 0.375, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.3312 GAME STATE: pre-flop BET: 0 RAISING
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffChance": 0.375, "bluffStage": ""} 
+LOST [{u'blind': 10, u'payout': 5, u'name': u'PessimistBot', u'actions': {}, u'cards': [u'Th', u'Ts'], u'state': u'active', u'ante': 0, u'chips': 765, u'wagered': 0}, {u'blind': 5, u'payout': -5, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'fold'}]}, u'state': u'folded', u'ante': 0, u'chips': 1235, u'wagered': 0}]
+{"lastBluffHand": 20, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.375} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'6s', u'Kh'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 1240, u'wagered': 0}
+{"lastBluffHand": 20, "bluffChance": 0.375, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.5298 GAME STATE: pre-flop BET: 45 RAISING BLUFFING
+{"lastBluffHand": 26, "needToUpdateBluffChance": true, "bluffChance": 0.375, "bluffStage": ""} 
+last opponent action: raise
+{u'canRaise': False, u'call': 45, u'raise': 90}
+WIN ODDS: 0.5548 GAME STATE: pre-flop BET: 45 CALLING
+{"lastBluffHand": 26, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.1875} 
+{u'canRaise': True, u'call': 260, u'raise': 520}
+WIN ODDS: 0.5604 GAME STATE: flop BET: 520 RAISING
+{"lastBluffHand": 26, "bluffChance": 0.1875, "needToUpdateBluffChance": false, "bluffStage": ""} 
+{u'canRaise': False, u'call': 145, u'raise': 405}
+WIN ODDS: 0.5544 GAME STATE: flop BET: 145 CALLING
+{"lastBluffHand": 26, "needToUpdateBluffChance": false, "bluffChance": 0.1875, "bluffStage": ""} 
+{u'canRaise': True, u'call': 0, u'raise': 20}
+WIN ODDS: 0.3324 GAME STATE: turn BET: 740 RAISING
+{"lastBluffHand": 26, "needToUpdateBluffChance": false, "bluffStage": "", "bluffChance": 0.1875} 
+LOST [{u'blind': 10, u'payout': 760, u'name': u'PessimistBot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 85}], u'flop': [{u'type': u'raise', u'bet': 260}, {u'type': u'allIn', u'bet': 405}]}, u'hand': [u'Jc', u'Jd', u'9s', u'6h', u'4c'], u'cards': [u'Jc', u'Jd'], u'state': u'allIn', u'handName': u'One pair', u'ante': 0, u'chips': 1520, u'wagered': 0}, {u'blind': 5, u'payout': -760, u'name': u'Memory Bot', u'actions': {u'turn': [{u'type': u'allIn', u'bet': 480}], u'pre-flop': [{u'type': u'raise', u'bet': 45}, {u'type': u'call', u'bet': 45}], u'flop': [{u'type': u'raise', u'bet': 520}, {u'type': u'call', u'bet': 145}]}, u'hand': [u'9s', u'9h', u'Jh', u'6h', u'4c'], u'cards': [u'Jh', u'9h'], u'state': u'allIn', u'handName': u'One pair', u'ante': 0, u'chips': 480, u'wagered': 0}]
+{"lastBluffHand": 26, "bluffChance": 0.1875, "needToUpdateBluffChance": false, "bluffStage": ""} 
+WON {u'blind': 10, u'payout': 5, u'name': u'Memory Bot', u'actions': {}, u'cards': [u'Jd', u'As'], u'state': u'active', u'ante': 0, u'position': 0, u'chips': 485, u'wagered': 0}
+{"lastBluffHand": 26, "needToUpdateBluffChance": false, "bluffChance": 0.1875, "bluffStage": ""} 
+{u'canRaise': True, u'call': 5, u'raise': 15}
+WIN ODDS: 0.4514 GAME STATE: pre-flop BET: 30 RAISING BLUFFING
+{"lastBluffHand": 28, "needToUpdateBluffChance": true, "bluffStage": "", "bluffChance": 0.1875} 
+last opponent action: fold
+WON {u'blind': 5, u'payout': 10, u'name': u'Memory Bot', u'actions': {u'pre-flop': [{u'type': u'raise', u'bet': 30}]}, u'cards': [u'Td', u'6s'], u'state': u'active', u'ante': 0, u'position': 1, u'chips': 495, u'wagered': 0}
+{"lastBluffHand": 28, "bluffChance": 0.28125, "needToUpdateBluffChance": false, "bluffStage": ""} 

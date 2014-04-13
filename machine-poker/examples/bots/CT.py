@@ -40,6 +40,7 @@ def card_translate_from_rs(rank, suit):
 """eg. 'Qd' -> (10,'d')
    The return value is a tuple, (rank, suit)"""
 def card_translate_from_str_to_rs(card):
+    card = str(card)
     rank = card[0]
     suit = card[1]
     if rank == '2':
