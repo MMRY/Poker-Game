@@ -79,7 +79,7 @@ module.exports = function(varA, varB) {
                 } else {
                     // An error has occurred with the interface
                     // Print the error
-                    console.log("ERROR: " + python.code);
+                    //console.log("ERROR: " + python.code);
                 }
 
                 return bet;
