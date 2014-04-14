@@ -6,9 +6,11 @@ var MachinePoker = require('../lib/index')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'Wizard Bot')
     , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
-    , SmartBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessimistBot')
+    , PessimistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessimistBot')
+    , HumanBot = require('./bots/smartBot')
     , narrator = MachinePoker.observers.narrator
-    , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json');
+    , fileLogger = MachinePoker.observers.fileLogger('./examples/results.json')
+    , fs = require('fs');
 
 // Functions to generate a GUID
 // Used to generate a short random string to be used in guid()
@@ -28,9 +30,16 @@ var table = MachinePoker.create({
 });
 
 
-  var players = [LocalSeat.create(MemoryBot), LocalSeat.create(SmartBot)];
+  var players = [LocalSeat.create(MemoryBot), LocalSeat.create(PessimistBot)];
   table.addPlayers(players);
-  table.on('tournamentClosed', function (a, b) { process.exit() } );
+  table.on('tournamentClosed', function (a, b) { 
+      // Delete the data file
+      var deleteFileName = "data_" + this.gameID;
+      if (fs.existsSync(deleteFileName)) {
+          fs.unlinkSync(deleteFileName);
+      }
+      process.exit();
+  });
   table.start();
 
 // Add some observers

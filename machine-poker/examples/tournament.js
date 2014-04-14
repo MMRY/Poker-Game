@@ -56,14 +56,18 @@ for (var i = 0; i < opponents.length; i += 1) {
 			}
 
 			// TESTING: Delete the game file used in the python code when we're done
-			console.log(this);
+
 			var deleteFileName = "data_" + this.gameID;
 			if (fs.existsSync(deleteFileName)) {
 				fs.unlinkSync(deleteFileName);
 			}
 
 			// Otherwise, we're done
-			console.log(winChance);
+			if (win) {
+				console.log("Win against " + enemyName);
+			} else {
+				console.log("Loss against " + enemyName);
+			}
 		};
 
 		//var fileLoggerTwo = MachinePoker.observers.fileLogger(resultFileName);
