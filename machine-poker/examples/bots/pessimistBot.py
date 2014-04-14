@@ -44,7 +44,7 @@ else:
         else:
             winOdds = float(brute_force.cal_win_odds_bf(hole, community))
         # pessimist bot is pessimistic about the win chances
-        winOdds = float(winOdds - .15)
+        winOdds = float(winOdds - .25)
         if winOdds < 0.0:
             winOdds = 0.0
         bet = winOdds * pot / (1-winOdds)

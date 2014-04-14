@@ -3,8 +3,8 @@ var startTime = new Date();
 var MachinePoker = require('../lib/index')
     , LocalSeat = MachinePoker.seats.JsLocal
     , RemoteSeat = MachinePoker.seats.Remote
-    , CallBot = require('./bots/callBot')
-    , PassiveBot = require('./bots/passiveBot')
+    , LoosePassiveBot = require('./bots/loosePassiveBot')
+    , TightPassiveBot = require('./bots/tightPassiveBot')
     , RandBot = require('./bots/randBot')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
     , LooseAgressiveBot = require('./bots/wrapperBot')('looseAgressiveBot.py', 'LooseAgressiveBot')
@@ -28,11 +28,11 @@ function guid() {
 }
 
 // Number of games to run against each opponent
-var gamesToRun = 10;
+var gamesToRun = 5;
 
 // This is going to be a tournament, so generate an array of possible opponents
-var opponents = [CallBot, RandBot, OptimistBot, PessmistBot, WizardBot];
-var winChance = {'CallBot':0, 'RandBot':0 , 'OptimistBot':0, 'PessmistBot':0, 'WizardBot':0};
+var opponents = [LoosePassiveBot, RandBot, OptimistBot, PessmistBot, WizardBot];
+var winChance = {'LoosePassiveBot':0, 'RandBot':0 , 'OptimistBot':0, 'PessmistBot':0, 'WizardBot':0};
 var completedGames = 0;
 var cachedCompletedGames = 0;
 

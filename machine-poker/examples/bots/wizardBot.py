@@ -1,7 +1,8 @@
 #!/usr/bin/python
-"""potOddsBot.py:
-   This is an agent which will bet the exact amount of chips according
-   to the pot odds."""
+"""wizardBot.py:
+   This is an agent which bets according to an algorithm. 
+   We developed this algorithm after reading about a betting strategy at this site:
+   http://wizardofodds.com/games/ultimate-texas-hold-em/ """
 import sys
 import json
 import monte_carlo
