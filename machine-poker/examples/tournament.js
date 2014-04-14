@@ -4,10 +4,10 @@ var MachinePoker = require('../lib/index')
     , LocalSeat = MachinePoker.seats.JsLocal
     , RemoteSeat = MachinePoker.seats.Remote
     , CallBot = require('./bots/callBot')
-    , FoldBot = require('./bots/foldBot')
+    , PassiveBot = require('./bots/passiveBot')
     , RandBot = require('./bots/randBot')
     , MemoryBot = require('./bots/wrapperBot')('potOddsBot.py', 'Memory Bot')
-    , RandBot2 = require('./bots/wrapperBot')('randBot2.py', 'RandBot2')
+    , LooseAgressiveBot = require('./bots/wrapperBot')('looseAgressiveBot.py', 'LooseAgressiveBot')
     , OptimistBot = require('./bots/wrapperBot')('optimistBot.py', 'OptimistBot')
     , PessmistBot = require('./bots/wrapperBot')('pessimistBot.py', 'PessmistBot')
     , WizardBot = require('./bots/wrapperBot')('wizardBot.py', 'WizardBot')
@@ -28,11 +28,11 @@ function guid() {
 }
 
 // Number of games to run against each opponent
-var gamesToRun = 1;
+var gamesToRun = 10;
 
 // This is going to be a tournament, so generate an array of possible opponents
-var opponents = [CallBot, RandBot, OptimistBot, PessmistBot];
-var winChance = {'CallBot':0, 'RandBot':0 , 'OptimistBot':0, 'PessmistBot':0};
+var opponents = [CallBot, RandBot, OptimistBot, PessmistBot, WizardBot];
+var winChance = {'CallBot':0, 'RandBot':0 , 'OptimistBot':0, 'PessmistBot':0, 'WizardBot':0};
 var completedGames = 0;
 var cachedCompletedGames = 0;
 

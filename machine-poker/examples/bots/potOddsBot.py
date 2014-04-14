@@ -10,6 +10,7 @@ import CT
 import os
 import random
 
+debugF = open("debugPotOddsBot", 'a')
 if (len(sys.argv) < 2):
     sys.exit(1)
 else:
@@ -19,7 +20,6 @@ else:
     game = json.loads(game_info)
     """get the game's unique ID. We use this to read/write from our persistent game data file"""
     game_id = game["gameID"]
-    debugF = open("debugPotOddsBot" + game_id,'a')
     file_exists = os.path.isfile("data_" + game_id)
     #debugF.write("file exists: " + str(file_exists) + " \n")
     if file_exists:

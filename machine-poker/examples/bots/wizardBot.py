@@ -32,19 +32,6 @@ else:
     game_info = game_string.read()
     game = json.loads(game_info)
 
-    """get the game's unique ID. We use this to read/write from our persistent game data file"""
-    game_id = game["gameID"]
-    dataFile = open("data_" + game_id, 'a')
-    fileData = dataFile.read()
-    if len(fileData) > 0:
-        data = json.loads(fileData)
-    else:
-        # construct the json data
-        data = []
-        data["bluffChance"] = 0.5
-
-    #debugF.write(str(game) + "\n")
-
     """1. Get the current amount in pot"""
     pot = 0 #Current amount in bot
     for player in game["players"]:
