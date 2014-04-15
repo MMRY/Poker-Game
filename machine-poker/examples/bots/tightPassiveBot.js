@@ -1,7 +1,7 @@
 module.exports = function () {
 
   var info = {
-    name: "FoldBot"
+    name: "TightPassiveBot"
   };
 
   function update(game) {

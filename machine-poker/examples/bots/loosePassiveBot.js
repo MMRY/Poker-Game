@@ -1,7 +1,7 @@
 module.exports = function () {
 
   var info = {
-    name: "CallBot"
+    name: "LoosePassiveBot"
   };
 
   function update(game) {
